@@ -1,1 +1,136 @@
+:root {
+  --custom-color: #FF6250; /* Define tu color personalizado aquí */
+}
+
 /* You can add global styles to this file, and also import other style files */
+.body-root {
+
+    background-image: url("./assets/images/backgroundRoot.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.background-container {
+    /* Establece el tamaño mínimo del contenedor para evitar que el contenido se solape con la imagen de fondo */
+    min-height: 100vh; /* Establece la altura mínima del contenedor para ocupar toda la pantalla verticalmente */
+    /* Puedes agregar más estilos a tu contenedor, como colores de texto, márgenes, etc. */
+        font-family: 'Poppins', sans-serif;
+        padding: 24px;
+}
+
+.responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr) );
+    gap: 24px
+}
+
+.title-text {
+    color: #000000;
+    font-style: bold;
+}
+
+.subtitle-text {
+    color: #FF6250;
+}
+
+.example-card {
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, .9) !important;
+  color: black;
+}
+
+.card-to-do{
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, .9) !important;
+  color: black;
+}
+
+.container{
+  text-align: -webkit-center;
+}
+
+.img-card{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.example-header-image {
+  background-image: url('./assets/images/profile.png');
+  background-size: cover;
+}
+
+::ng-deep .mat-mdc-card-subtitle {
+  color: #FF6250 !important;
+}
+
+.atom-button {
+  background: #FF7048 !important;
+  color: white !important;
+}
+
+.textarea-no-resize {
+  resize: none;
+}
+
+.mt-5 {
+  margin-top: 15px;
+}
+
+.swal2-popup {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+/* Cambiar la fuente de los botones en SweetAlert2 */
+div.swal2-container button.swal2-styled:not([disabled]) {
+  font-family: 'Poppins', sans-serif; /* Cambia 'Tu-Fuente-Preferida' a la fuente que desees */
+}
+
+div.swal2-container .swal2-input {
+  height: 2.625em;
+   padding: 0 !important;
+   width: -webkit-fill-available !important;
+   margin-bottom: 1em;
+}
+
+
+
+  /* Animaciones */
+
+.animated {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fast {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+.text-white {
+  color: white; /* Cambia el color de texto a blanco */
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
