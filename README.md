@@ -1,4 +1,4 @@
-![Logo](./src/assets/images/marcaLogo.png)
+<img src="./src/assets/images/marcaLogo.png" alt="Logo" width="100" height="100">
 
 # ToDo App
 
