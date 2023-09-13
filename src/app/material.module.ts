@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -44,4 +44,5 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatBadgeModule
   ]
 })
-export class MaterialModule { }
+export class MaterialModule {
+}

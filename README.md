@@ -1,27 +1,47 @@
-# ToDoFront
+# Nombre del Proyecto
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.18.
+Descripción breve del proyecto en una o dos frases.
 
-## Development server
+## Índice
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- [Descripción](#descripcion)
+- [Características](#características)
+- [Capturas de Pantalla](#capturas-de-pantalla)
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Tecnologías Utilizadas](#tecnologías-utilizadas)
+- [Contribución](#contribución)
+- [Licencia](#licencia)
 
-## Code scaffolding
+## Descripción
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Una descripción más detallada del proyecto que incluye su propósito, objetivo y cualquier información relevante para contextualizar a los usuarios.
 
-## Build
+## Características
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Enumera las principales características de tu aplicación. Por ejemplo:
 
-## Running unit tests
+- Muestra todas las tareas pendientes.
+- Permite agregar nuevas tareas.
+- Permite marcar tareas como completadas o pendientes.
+- Opciones para editar y eliminar tareas.
+- Diseño responsive para adaptarse a diferentes dispositivos.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Capturas de Pantalla
 
-## Running end-to-end tests
+Incluye capturas de pantalla de tu aplicación para mostrar su aspecto y funcionamiento. Puedes usar una sección de imágenes o enlaces a imágenes alojadas en otro lugar.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Instalación
 
-## Further help
+Proporciona instrucciones claras y concisas sobre cómo instalar y configurar tu aplicación. Esto podría incluir:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Clonar el repositorio.
+- Instalar dependencias.
+- Configurar variables de entorno.
+- Iniciar la aplicación.
+
+```bash
+git clone https://github.com/TuUsuario/TuProyecto.git
+cd TuProyecto
+npm install
+npm start

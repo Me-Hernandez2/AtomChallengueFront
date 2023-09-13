@@ -1,22 +1,22 @@
 <div class="container animated fadeIn">
-    <mat-card class="card-to-do">
-        <mat-card-header>
-            <div mat-card-avatar class="example-button-container">
-                <button (click)="navigateToDoList()" mat-fab color="accent"
-                    aria-label="Example icon button with a bookmark icon">
-                    <mat-icon><span class="material-symbols-outlined">
+  <mat-card class="card-to-do">
+    <mat-card-header>
+      <div mat-card-avatar class="example-button-container">
+        <button (click)="navigateToDoList()" mat-fab color="accent"
+                aria-label="Example icon button with a bookmark icon">
+          <mat-icon><span class="material-symbols-outlined">
                             arrow_back
                         </span></mat-icon>
-                </button>
-            </div>
-        </mat-card-header>
-        <mat-card-content>
-            <h2>Nueva Tarea</h2>
-            <app-task-form (updateTaskList)="getAllTasks($event)"></app-task-form>
-            <br>
-            <app-task-item [taskLs]="taskList" (updateTaskList)="getAllTasks($event)"></app-task-item>
-        </mat-card-content>
-        <mat-card-actions>
-        </mat-card-actions>
-    </mat-card>
+        </button>
+      </div>
+    </mat-card-header>
+    <mat-card-content>
+      <h2>Nueva Tarea</h2>
+      <app-task-form (updateTaskList)="getAllTasks($event)"></app-task-form>
+      <br>
+      <app-task-item [taskLs]="taskList" (updateTaskList)="getAllTasks($event)"></app-task-item>
+    </mat-card-content>
+    <mat-card-actions>
+    </mat-card-actions>
+  </mat-card>
 </div>

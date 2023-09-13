@@ -1,9 +1,8 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { WelcomeComponent } from './welcome/welcome.component';
-import { MaterialModule } from '../material.module';
-import { LandingRoutingModule } from './landing-routing.module';
-
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {WelcomeComponent} from './welcome/welcome.component';
+import {MaterialModule} from '../material.module';
+import {LandingRoutingModule} from './landing-routing.module';
 
 
 @NgModule({
@@ -16,4 +15,5 @@ import { LandingRoutingModule } from './landing-routing.module';
     LandingRoutingModule
   ]
 })
-export class LandingModule { }
+export class LandingModule {
+}

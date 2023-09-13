@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { TaskListComponent } from './task-list/task-list.component';
-import { RouterModule, Routes } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {TaskListComponent} from './task-list/task-list.component';
+import {RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [
-  { path: '', component: TaskListComponent },
+  {path: '', component: TaskListComponent},
   // Agrega aquí otras rutas relacionadas con usuarios si es necesario
 ];
 
@@ -17,4 +17,5 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class TasksRoutingModule { }
+export class TasksRoutingModule {
+}

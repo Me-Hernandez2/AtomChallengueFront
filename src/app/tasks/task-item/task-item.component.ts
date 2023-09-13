@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {
   CdkDragDrop,
   CdkDrag,
@@ -7,10 +7,10 @@ import {
   moveItemInArray,
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
-import { TaskService } from 'src/services/tasks/task.service';
-import { AddResponse, TaskItem } from '../interfaces/task.interface';
+import {TaskService} from 'src/services/tasks/task.service';
+import {DefaultResponse, TaskItem} from '../interfaces/task.interface';
 import Swal from 'sweetalert2'
-import { ToastService } from 'src/services/toast/toast.service';
+import {ToastService} from 'src/services/toast/toast.service';
 
 @Component({
   selector: 'app-task-item',
@@ -20,12 +20,13 @@ import { ToastService } from 'src/services/toast/toast.service';
 })
 
 export class TaskItemComponent implements OnInit {
- 
+
   @Input() taskLs: TaskItem[] = [];
-  @Output () updateTaskList: EventEmitter<AddResponse> = new EventEmitter();
+  @Output() updateTaskList: EventEmitter<DefaultResponse> = new EventEmitter();
 
   constructor(private taskService$: TaskService,
-              private toastService$: ToastService) { }
+              private toastService$: ToastService) {
+  }
 
   ngOnInit(): void {
   }
@@ -35,13 +36,13 @@ export class TaskItemComponent implements OnInit {
   }
 
 
-  async launchFormEdit(task:TaskItem) {
-    const { value: formValues } = await Swal.fire({
+  async launchFormEdit(task: TaskItem) {
+    const {value: formValues} = await Swal.fire({
       title: 'Editar Tarea',
       html:
-      '<label>Titulo:</label>' +
+        '<label>Título:</label>' +
         `<input id="swal-input1" value="${task.title}" class="swal2-input">` +
-        '<label style="margin-top=5px">Descripcion:</label>' +
+        '<label style="margin-top=5px">Descripción:</label>' +
         `<input maxlength="70" value="${task.description}" id="swal-input2" class="swal2-input">`,
       focusConfirm: false,
       showCancelButton: true,
@@ -62,29 +63,29 @@ export class TaskItemComponent implements OnInit {
     if (formValues) {
       const isEmptyField = Object.values(formValues).some(value => value === "" || value === null || value === undefined);
       if (!isEmptyField) {
-       this.updateTask(formValues as TaskItem)
-      }else{
-        this.toastService$.showToast('error', 'No puedes dejar campos vacios')
-      }     
+        this.updateTask(formValues as TaskItem)
+      } else {
+        this.toastService$.showToast('error', 'Todos los campos son obligatorios.')
+      }
     }
   }
 
-  changueStatus(status: any, task:TaskItem){
+  changueStatus(status: any, task: TaskItem) {
     task.status = status;
     this.updateTask(task);
   }
 
-  updateTask(task:TaskItem){
-    this.taskService$.updateTask(task).subscribe( (res:AddResponse) => {
-      if(res.status === 'success')
-      this.updateTaskList.emit(res);
+  updateTask(task: TaskItem) {
+    this.taskService$.updateTask(task).subscribe((res: DefaultResponse) => {
+      if (res.status === 'success')
+        this.updateTaskList.emit(res);
     })
   }
 
-  deleteTask(task:TaskItem){
+  deleteTask(task: TaskItem) {
     Swal.fire({
-      title: 'Estas seguro?',
-      text: "Deseas eliminar esta tarea?",
+      title: '¿Estás seguro?',
+      text: "¿Deseas eliminar esta tarea? ",
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#d33',
@@ -92,9 +93,9 @@ export class TaskItemComponent implements OnInit {
       cancelButtonText: 'No, mejor no'
     }).then((result) => {
       if (result.isConfirmed) {
-        this.taskService$.deleteTask(task).subscribe( (res:AddResponse) => {
-          if(res.status === 'success')
-          this.updateTaskList.emit(res);
+        this.taskService$.deleteTask(task).subscribe((res: DefaultResponse) => {
+          if (res.status === 'success')
+            this.updateTaskList.emit(res);
         })
       }
     })

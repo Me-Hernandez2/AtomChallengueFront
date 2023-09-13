@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import { reqAppInfo } from '../mocks/welcome.moks';
-import { Router } from '@angular/router';
+import {Component} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-welcome',
@@ -9,12 +8,12 @@ import { Router } from '@angular/router';
 })
 export class WelcomeComponent {
 
-constructor(
-  private router: Router,
-   ) {
-}
+  constructor(
+    private router: Router,
+  ) {
+  }
 
-navigateToDoList(){
-  this.router.navigate(['toDoApp'])  
-}
+  navigateToDoList() {
+    this.router.navigate(['toDoApp'])
+  }
 }

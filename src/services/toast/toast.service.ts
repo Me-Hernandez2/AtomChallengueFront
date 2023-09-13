@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import Swal, { SweetAlertIcon } from 'sweetalert2'
+import {Injectable} from '@angular/core';
+import Swal, {SweetAlertIcon} from 'sweetalert2'
 
 
 @Injectable({
@@ -8,7 +8,9 @@ import Swal, { SweetAlertIcon } from 'sweetalert2'
 export class ToastService {
   private toastQueue: string[] = [];
   private isShowingToast = false;
-  constructor() {}
+
+  constructor() {
+  }
 
   showToast(icon: 'success' | 'error', message: string) {
     this.toastQueue.push(message);
