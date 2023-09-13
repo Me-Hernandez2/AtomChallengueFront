@@ -134,3 +134,22 @@ div.swal2-container .swal2-input {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
+/* Personaliza el scrollbar para navegadores webkit (como Chrome y Safari) */
+::-webkit-scrollbar {
+  width: 8px; /* Ancho del scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #FFB88F;
+}

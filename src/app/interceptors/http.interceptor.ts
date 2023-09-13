@@ -24,8 +24,10 @@ export class RequestInterceptor implements HttpInterceptor {
     return next.handle(req).pipe(
       tap((event: HttpEvent<any>) => {
         if (event instanceof HttpResponse) {
-          this.loaderService$.hideLoader();
-          this.toastService$.showToast('success', event.body.message); // Maneja la respuesta exitosa
+          setTimeout(() => {
+            this.loaderService$.hideLoader();
+            this.toastService$.showToast('success', event.body.message);
+          }, 200);
         }
       }),
       catchError((error) => {
