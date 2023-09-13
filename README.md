@@ -1,3 +1,5 @@
+![Logo](./src/assets/images/marcaLogo.png)
+
 # ToDo App
 
 Proyecto frontend de lista de tareas para Atom
@@ -10,8 +12,6 @@ Proyecto frontend de lista de tareas para Atom
 - [Instalación](#instalación)
 - [Uso](#uso)
 - [Tecnologías Utilizadas](#tecnologías-utilizadas)
-- [Contribución](#contribución)
-- [Licencia](#licencia)
 
 ## Descripción
 
