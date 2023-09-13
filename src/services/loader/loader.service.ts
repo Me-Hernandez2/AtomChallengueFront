@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import {Injectable} from '@angular/core';
+import {BehaviorSubject, Observable} from 'rxjs';
 
 
 @Injectable({
@@ -8,7 +8,8 @@ import { BehaviorSubject, Observable } from 'rxjs';
 export class LoaderService {
   private isLoading = new BehaviorSubject<boolean>(false);
 
-  constructor() {}
+  constructor() {
+  }
 
   // Método para obtener el estado del cargador como Observable
   getLoadingStatus(): Observable<boolean> {

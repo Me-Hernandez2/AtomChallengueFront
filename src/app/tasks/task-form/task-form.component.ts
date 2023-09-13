@@ -1,9 +1,8 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {TaskService} from 'src/services/tasks/task.service';
-import Swal from 'sweetalert2'
 import {DefaultResponse, TaskItem} from '../interfaces/task.interface';
-import { ToastService } from 'src/services/toast/toast.service';
+import {ToastService} from 'src/services/toast/toast.service';
 
 @Component({
   selector: 'app-task-form',
@@ -32,7 +31,7 @@ export class TaskFormComponent implements OnInit {
   }
 
   addTask() {
-    if(this.taskForm.valid){
+    if (this.taskForm.valid) {
       const payload: TaskItem = {
         title: this.taskForm.controls['title'].value,
         description: this.taskForm.controls['description'].value,
@@ -40,10 +39,10 @@ export class TaskFormComponent implements OnInit {
       }
       this.taskService$.addTask(payload).subscribe((res: DefaultResponse) => {
         if (res.status === 'success')
-        this.taskForm.reset();
-          this.updateTaskList.emit(res)
+          this.taskForm.reset();
+        this.updateTaskList.emit(res)
       })
-    }else{
+    } else {
       this.toastService$.showToast('error', 'Todos los campos son obligatorios.')
     }
   }

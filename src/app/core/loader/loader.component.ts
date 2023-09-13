@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { LoaderService } from 'src/services/loader/loader.service';
+import {Component} from '@angular/core';
+import {LoaderService} from 'src/services/loader/loader.service';
 
 @Component({
   selector: 'app-loader',
@@ -9,11 +9,12 @@ import { LoaderService } from 'src/services/loader/loader.service';
 export class LoaderComponent {
   isLoading: boolean = false;
 
-  constructor(private loaderService$: LoaderService) { }
+  constructor(private loaderService$: LoaderService) {
+  }
 
   ngOnInit() {
     this.loaderService$.getLoadingStatus().subscribe((status: boolean) => {
-      this.isLoading = status; 
+      this.isLoading = status;
     });
   }
 }

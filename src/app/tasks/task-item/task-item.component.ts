@@ -1,12 +1,5 @@
 import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {
-  CdkDragDrop,
-  CdkDrag,
-  CdkDropList,
-  CdkDropListGroup,
-  moveItemInArray,
-  transferArrayItem,
-} from '@angular/cdk/drag-drop';
+import {CdkDragDrop, moveItemInArray,} from '@angular/cdk/drag-drop';
 import {TaskService} from 'src/services/tasks/task.service';
 import {DefaultResponse, TaskItem} from '../interfaces/task.interface';
 import Swal from 'sweetalert2'

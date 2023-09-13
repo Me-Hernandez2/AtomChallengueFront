@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';
 import {MaterialModule} from '../material.module';
-import { LoaderComponent } from './loader/loader.component';
+import {LoaderComponent} from './loader/loader.component';
 
 
 @NgModule({

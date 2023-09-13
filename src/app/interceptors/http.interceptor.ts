@@ -1,12 +1,10 @@
 import {Injectable} from '@angular/core';
-import {
-  HttpEvent, HttpInterceptor, HttpHandler, HttpRequest, HttpResponse
-} from '@angular/common/http';
+import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse} from '@angular/common/http';
 
 import {Observable, throwError} from 'rxjs';
 import {catchError, tap} from 'rxjs/operators';
 import {ToastService} from 'src/services/toast/toast.service';
-import { LoaderService } from 'src/services/loader/loader.service';
+import {LoaderService} from 'src/services/loader/loader.service';
 
 /** Pass untouched request through to the next request handler. */
 @Injectable()
@@ -20,7 +18,7 @@ export class RequestInterceptor implements HttpInterceptor {
 
   intercept(req: HttpRequest<any>, next: HttpHandler):
     Observable<HttpEvent<any>> {
-      this.loaderService$.showLoader();
+    this.loaderService$.showLoader();
     return next.handle(req).pipe(
       tap((event: HttpEvent<any>) => {
         if (event instanceof HttpResponse) {
